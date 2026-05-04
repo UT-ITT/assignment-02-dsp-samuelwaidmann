@@ -2,6 +2,7 @@ cffi==2.0.0
 cfgv==3.5.0
 colorama==0.4.6
 distlib==0.4.0
+evdev==1.9.3
 filelock==3.29.0
 identify==2.6.19
 MIDIUtil==1.2.1
@@ -15,13 +16,16 @@ PyAudio==0.2.14
 pycparser==3.0
 pydocstyle==6.3.0
 pyglet==2.1.14
+pynput==1.8.1
 PyQt6==6.11.0
 PyQt6-Qt6==6.11.0
 PyQt6_sip==13.11.1
 pyqtgraph==0.14.0
 python-discovery==1.2.2
+python-xlib==0.33
 PyYAML==6.0.3
 ruff==0.15.12
+six==1.17.0
 snowballstemmer==3.0.1
 sounddevice==0.5.5
 virtualenv==21.3.0

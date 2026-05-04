@@ -9,9 +9,14 @@ A lightweight karaoke game where you sing into your microphone and try to match 
 ### Installation
 
 1. Install Python.
-2. Install dependencies:
+2. Create and activate a virtual environment.
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+3. Install dependencies:
 ```pip install -r requirements.txt```
-3. Place your MIDI file in karaoke_game/ (default: sing_along.mid).
+4. Place your MIDI file in karaoke_game/ (default: sing_along.mid).
 
 ### Running the Game
 
@@ -35,15 +40,43 @@ Make sure your microphone is connected and recognized by the system.
 
 ## 2. Whistle Input
 
-Recommended Packages: matplotlib, numpy, pyaudio, pynput
-Create a program called whistle-input.py that detects whistled frequency chirps and reacts to them
-in real time. Frequency chirps are signals that change their frequency over time, for example,
-“ooouuuiii” for an upwards chirp and “iiiuuuooo” for a downwards chirp. Use the pynput library to
-trigger key presses (up and down arrow) to navigate in arbitrary GUI menus by whistling.
-Score
-(3P) upwards and downwards whistling is detected correctly and robustly
-(2P) detection is robust against background noise
-(1P) low latency between input and detection
-(1P) triggered key events work
+This program detects whistled frequency chirps in real time and converts them into UP and DOWN arrow key presses. An upward chirp (“ooouuuiii”) triggers ↑, and a downward chirp (“iiiuuuooo”) triggers ↓. It includes noise‑robust filtering, low‑latency FFT processing, chirp‑slope detection, and live visualization.
 
-(1P) Well-structured and readable code, virtual environment is used
+### Installation
+
+1. Install Python.
+2. Create and activate a virtual environment.
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+3. Install dependencies:
+```pip install -r requirements.txt```
+4. When using Ubuntu activate X11 sessions and ensure Qt dependencies are installed:
+```sudo apt install libxcb-cursor0```
+When using another OS, please refer to the ![pynput documentation](https://pynput.readthedocs.io/en/latest/limitations.html#).
+
+### Starting the Program
+Run the script:
+```
+python3 whistle_input.py
+```
+
+A window will open showing live frequency and slope data while the program listens to your microphone.
+
+### How to Use
+- Whistle an upward sweep: triggers UP arrow.
+- Whistle a downward sweep: triggers DOWN arrow
+
+#### Use this to navigate:
+- menus
+- lists
+- browser pages
+- any interface controlled by arrow keys
+
+#### The program includes:
+- amplitude gating
+- frequency‑range filtering
+- median smoothing
+- slope‑based chirp detection
+- lockout to prevent double‑triggers
