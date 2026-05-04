@@ -9,6 +9,8 @@ import time
 
 
 class SongTimeline:
+    """Manage the timeline of the song and provide expected notes based on current time."""
+
     def __init__(self, notes):
         """Initialize the song timeline with a list of notes."""
         self.notes = notes

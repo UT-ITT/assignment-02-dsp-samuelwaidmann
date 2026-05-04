@@ -1,5 +1,6 @@
 """
 This module implements the visualizer for the karaoke game using pyglet.
+
 It displays the note bars, player performance, score, and handles the start/pause/summary screens.
 """
 

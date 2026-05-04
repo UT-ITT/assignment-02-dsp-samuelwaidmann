@@ -54,7 +54,6 @@ def detect_pitch(data):
     Returns:
         freq: Detected frequency in Hz, or None if no valid pitch is detected.
     """
-
     # Convert bytes to numpy array
     audio = np.frombuffer(data, dtype=np.int16)
 
