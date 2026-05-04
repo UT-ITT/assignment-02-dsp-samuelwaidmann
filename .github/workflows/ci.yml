@@ -34,7 +34,6 @@ jobs:
       - name: Check docstring style (PEP257)
         run: pydocstyle . --match='(?!DIPPID\.py|pyglet_minimal\.py|simple_sender\.py|demo_heartbeat\.py|read_midi\.py|audio_sample\.py).*\.py'
 
-        
       - name: Audit dependencies
         run: pip-audit --ignore-vuln CVE-2026-3219
         
