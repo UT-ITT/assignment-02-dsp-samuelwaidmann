@@ -1,13 +1,12 @@
 import sounddevice as sd
-import numpy as np
 import pyqtgraph as pg
 
 
 # Set up audio stream
 # reduce chunk size and sampling rate for lower latency
-CHUNK_SIZE = 1024 # Number of audio frames per buffer
-RATE = 44100 # Audio sampling rate (HZ)
-CHANNELS = 1 # Mono audio
+CHUNK_SIZE = 1024  # Number of audio frames per buffer
+RATE = 44100  # Audio sampling rate (HZ)
+CHANNELS = 1  # Mono audio
 
 # print info about audio devices
 
@@ -16,7 +15,7 @@ devices = sd.query_devices()
 
 input_devices = []
 for i, dev in enumerate(devices):
-    if dev['max_input_channels'] > 0:
+    if dev["max_input_channels"] > 0:
         print(f"{i}: {dev['name']}")
         input_devices.append(i)
 
@@ -31,7 +30,7 @@ win = pg.GraphicsLayoutWidget(title="Live Audio")
 plot = win.addPlot()
 plot.setYRange(-1, 1)
 
-curve = plot.plot(pen='w')
+curve = plot.plot(pen="w")
 
 win.show()
 
@@ -52,7 +51,7 @@ stream = sd.InputStream(
     samplerate=RATE,
     blocksize=CHUNK_SIZE,
     callback=audio_callback,
-    latency='low'
+    latency="low",
 )
 
 
