@@ -4,17 +4,33 @@
 
 ## 1. Karaoke Game
 
-Recommended Packages: matplotlib, numpy, pyaudio, pyglet
-Create a program called karaoke.py that captures audio from your computer’s microphone and
-detects the sound’s major frequency in real time. Use this frequency as input for a small audio-based
-karaoke game. You can generate notes at random, specify them in a list in your code, or read a midi
-file. Build your own karaoke game for a song, including an enjoyable pyglet interface. The song
-should contain at least 15 notes.
-Score
-(3P) frequency detection works correctly and robustly
-(2P) the game is playable, does not crash, and is (kind of) fun to play
-(1P) the game tracks some kind of score for correctly sung notes
-(1P) low latency between input and detection
+A lightweight karaoke game where you sing into your microphone and try to match the pitch of scrolling notes. The game visualizes your pitch in real time, scores your accuracy, and shows a final summary at the end of the song.
+
+### Installation
+
+1. Install Python.
+2. Install dependencies:
+```pip install -r requirements.txt```
+3. Place your MIDI file in karaoke_game/ (default: sing_along.mid).
+
+### Running the Game
+
+Start the game with
+```python karaoke.py```
+from the home directory of the repository.
+
+Make sure your microphone is connected and recognized by the system.
+
+### Sources Used for Inspiration
+- https://dnmtechs.com/real-time-sound-processing-in-python-3-capturing-and-analyzing-microphone-input/
+- https://www.c-sharpcorner.com/article/compute-fft-for-audio-pitch-detection-real-time-vocal-coach-for-singers-using-p/
+- https://github.com/Akshayalakshmi-P/Real-Time-Pitch-Tracker-and-Note-detection
+
+### Additional Features One Could Add
+- pitch deviation meter
+- vibrato smoothing
+- a progress bar for the song
+- suppress the terminal warnings when starting the game
 
 
 ## 2. Whistle Input
