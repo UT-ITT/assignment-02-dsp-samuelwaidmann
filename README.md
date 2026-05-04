@@ -54,7 +54,7 @@ source venv/bin/activate
 ```pip install -r requirements.txt```
 4. When using Ubuntu activate X11 sessions and ensure Qt dependencies are installed:
 ```sudo apt install libxcb-cursor0```
-When using another OS, please refer to the ![pynput documentation](https://pynput.readthedocs.io/en/latest/limitations.html#).
+When using another OS, please refer to the [pynput documentation](https://pynput.readthedocs.io/en/latest/limitations.html#).
 
 ### Starting the Program
 Run the script:
