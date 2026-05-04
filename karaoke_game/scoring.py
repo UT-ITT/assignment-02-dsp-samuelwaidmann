@@ -1,10 +1,13 @@
 """
 Minimal scoring system for karaoke.
+
 Evaluates correctness of sung pitch vs expected pitch.
 """
 
 
 class ScoringSystem:
+    """Simple scoring system for karaoke game."""
+
     def __init__(self, tolerance_semitones=0.75):
         """Initialize the scoring system."""
         self.tolerance = tolerance_semitones

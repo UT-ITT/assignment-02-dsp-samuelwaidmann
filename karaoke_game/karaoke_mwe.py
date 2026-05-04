@@ -46,12 +46,14 @@ def midi_to_note(m):
 # Pitch Detection (FFT)
 # -----------------------------
 def detect_pitch(data):
-    """Detect the fundamental frequency from raw audio data using FFT.
+    """
+    Detect the fundamental frequency from raw audio data using FFT.
 
     Arguments:
         data: bytes of audio data from the microphone (16-bit PCM).
     Returns:
-        freq: Detected frequency in Hz, or None if no valid pitch is detected."""
+        freq: Detected frequency in Hz, or None if no valid pitch is detected.
+    """
 
     # Convert bytes to numpy array
     audio = np.frombuffer(data, dtype=np.int16)
@@ -85,7 +87,7 @@ def detect_pitch(data):
 # Main Loop
 # -----------------------------
 def main():
-    """Main function to capture audio and detect pitch in real-time."""
+    """Capture audio and detect pitch in real-time."""
     pa = pyaudio.PyAudio()
 
     stream = pa.open(

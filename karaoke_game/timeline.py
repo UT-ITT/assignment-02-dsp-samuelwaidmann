@@ -1,5 +1,6 @@
 """
 Timeline integration for the karaoke game.
+
 Given a list of (start, duration, pitch) notes, this class
 returns the expected note at the current playback time.
 """

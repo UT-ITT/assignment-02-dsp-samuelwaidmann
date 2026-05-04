@@ -1,4 +1,6 @@
 """
+Whistle Input Detection and key simulation.
+
 This module implements real-time whistle detection using FFT-based frequency estimation,
 slope detection for chirps, and live plotting of frequency and slope.
 It simulates key (up and down) presses based on detected chirps.
@@ -181,6 +183,7 @@ def audio_callback(indata, frames, t, status):
 # Main
 # -----------------------------
 def main():
+    """Start the whistle detection and visualization."""
     print(
         "Whistle detector with live frequency + slope plot. Close the plot window to stop."
     )

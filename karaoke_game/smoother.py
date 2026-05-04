@@ -2,6 +2,8 @@
 
 
 class PitchSmoother:
+    """Simple exponential moving average smoother for MIDI pitch values."""
+
     def __init__(self, alpha=0.2):
         """Initialize the pitch smoother with a given smoothing factor (alpha)."""
         self.alpha = alpha

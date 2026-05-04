@@ -83,7 +83,7 @@ def audio_thread(timeline, scoring, vis, end_detector, smoother):
 
 
 def main():
-    """Main function to set up the karaoke game."""
+    """Set up the karaoke game."""
     notes = load_midi_notes("karaoke_game/sing_along.mid")
     timeline = SongTimeline(notes)
     scoring = ScoringSystem()
