@@ -250,7 +250,7 @@ class KaraokeVisualizer:
             self.summary_label.text = (
                 f"Song Finished!\n"
                 f"Final Score: {self.score} of {self.scoring.total_frames}\n"
-                f"Accuracy: {self.accuracy*100:.1f}%\n\n"
+                f"Accuracy: {self.accuracy * 100:.1f}%\n\n"
                 f"Press R to restart"
             )
 
